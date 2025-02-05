@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Configure base URL for the Laravel backend
 const api = axios.create({
-  baseURL: 'http://127.0.0.1:8000/api',
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
 });
 
 // Fetch all TODO items
@@ -20,4 +20,4 @@ export const addTodo = async (title: string) => {
 // Delete a TODO item by ID
 export const deleteTodo = async (id: number) => {
   await api.delete(`/todo/${id}`);
-};
+}; 
