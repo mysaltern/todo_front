@@ -103,14 +103,6 @@ The application expects a backend API at the base URL specified in the `.env.loc
 
 ---
 
-## **Customization**
-You can customize the application by:
-
-1. Updating the design using Tailwind CSS classes in the components.
-2. Extending the functionality to include features like editing tasks or marking tasks as complete.
-
----
-
 ## **Building and Deployment**
 
 ### **1. Build the Project**
