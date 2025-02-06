@@ -64,14 +64,14 @@ Open this URL in your browser to view the app.
 ```
 /app
   ├── page.tsx                # The main page that renders the TODO list
-  ├── todo              # Contains reusable UI todo
+  ├── todo                    # Contains reusable UI todo
       ├── TodoForm.tsx        # Form to add new TODO items
       ├── TodoList.tsx        # List of TODO items
       └── TodoItem.tsx        # Individual TODO item component
 /services
   └── api.ts                  # API functions to interact with backend services
-/public                       # Static assets (if any)
-/styles                       # Global styles (if needed)
+/public                       # Static assets
+/tests                       
 .env.local                    # Environment variables for local development
 ```
 
