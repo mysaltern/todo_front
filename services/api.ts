@@ -5,6 +5,9 @@ const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
 });
 
+// Export the `api` instance
+export default api;
+
 // Define the TODO type
 interface Todo {
   id: number;
@@ -15,6 +18,7 @@ interface Todo {
 export const fetchTodos = async (): Promise<Todo[]> => {
   try {
     const response: AxiosResponse<Todo[]> = await api.get('/todo');
+    
     return response.data;
   } catch (error) {
     console.error('Error fetching todos:', error);

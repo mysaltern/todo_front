@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import TodoList from "./todo/TodoList";
 import TodoForm from "./todo/TodoForm";
-import { fetchTodos, addTodo, deleteTodo } from "./services/api";
+import { fetchTodos, addTodo, deleteTodo } from "../services/api";
 
 interface Todo {
   id: number;
