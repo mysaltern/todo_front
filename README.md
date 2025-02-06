@@ -87,6 +87,9 @@ Builds the project for production.
 
 ### **`npm start`**
 Starts the production server (after building the project).
+### **`npm run test`**
+test the project.
+
 
 ---
 
@@ -122,15 +125,9 @@ npm run build
 npm start
 ```
 
+
+
 The app will be available at `http://localhost:3000/`.
 
----
 
-## **License**
-This project is licensed under the MIT License. Feel free to use, modify, and distribute it.
-
----
-
-## **Contributing**
-Feel free to submit issues or pull requests if you have suggestions or improvements for the project.
 
