@@ -9,7 +9,6 @@ interface Todo {
   id: number;
   title: string;
 }
-
 export default function TodoPage() {
   const [todos, setTodos] = useState<Todo[]>([]);
 
@@ -23,10 +22,12 @@ export default function TodoPage() {
   }, []);
 
   // Add new TODO item
-  const handleAddTodo = async (task: string) => {
-    const newTodo = await addTodo(task);
+  const handleAddTodo = async (title: string) => {
+    const newTodo = await addTodo(title);
+    if (!newTodo) return; // Prevent adding null to the array
     setTodos((prevTodos) => [...prevTodos, newTodo]);
   };
+  
 
   // Delete TODO item by ID
   const handleDeleteTodo = async (id: number) => {
@@ -35,10 +36,10 @@ export default function TodoPage() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">TODO List</h1>
-      <TodoForm onAddTodo={handleAddTodo} />
-      <TodoList todos={todos} onDeleteTodo={handleDeleteTodo} />
-    </div>
+    <div className="max-w-xl mx-auto p-6 bg-gray-900 text-white rounded-lg shadow-md">
+    <h1 className="text-3xl font-bold mb-6 text-center">TODO List</h1>
+    <TodoForm onAddTodo={handleAddTodo} />
+    <TodoList todos={todos} onDeleteTodo={handleDeleteTodo} />
+  </div>
   );
 }
